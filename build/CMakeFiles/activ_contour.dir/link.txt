@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/activ_contour.dir/main.cpp.o CMakeFiles/activ_contour.dir/Snake.cpp.o CMakeFiles/activ_contour.dir/Point.cpp.o  -o activ_contour 

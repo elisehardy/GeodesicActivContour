@@ -5,19 +5,20 @@
 #ifndef UNTITLED2_POINT_H
 #define UNTITLED2_POINT_H
 
+
+
 class Point {
+    
+    public:
+        int x;
+        int y;
+        
+        Point(int _x, int _y);
+        ~Point();
+        double calculDistance(Point p);
+        void setLocation(int _x, int _y);
+};
 
-
-public:
-    int x;
-    int y;
-
-    Point(int _x, int _y);
-    ~Point();
-    double calculDistance(Point p);
-    void setLocation(int _x, int _y);
-
-    };
 
 
 #endif //UNTITLED2_POINT_H
