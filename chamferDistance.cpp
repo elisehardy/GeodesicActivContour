@@ -1,32 +1,35 @@
 #include "chamferDistance.hpp"
 
 chamferDistance::chamferDistance(): normalizer(5), chamferWidth(0), chamferHeigth(0){};
-void chamferDistance::testAndSet(std::vector<std::vector<double>> output, int x, int y, double newvalue){
+void chamferDistance::testAndSet(double output[640][480], int x, int y, double newvalue){
     if(x<0 || x>=this->chamferWidth) return;
     if(y<0 || y>=this->chamferHeigth) return;
     double v = output[x][y];
     if (v>=0 && v<newvalue) return;
     output[x][y] = newvalue;
 };
-std::vector<std::vector<double>> chamferDistance::calcul(std::vector<std::vector<bool>> input, int width, int height){
+double** chamferDistance::calcul(bool input[640][480], int width, int height){
     this->chamferWidth = width;
     this->chamferHeigth = height;
-    double output[width][height];
+    double output[640][480];
 
     // initialize distance
-    for (int y=0; y<height; y++)
-        for (int x=0; x<width; x++)
-            if (  input[x][y] )
-                output[x][y]=0; // inside the object -> distance=0
+    for (int y=0; y<height; y++) {
+        for (int x = 0; x < width; x++) {
+            if (input[x][y])
+                output[x][y] = 0; // inside the object -> distance=0
             else
-                output[x][y]=-1; // outside the object -> to be computed
+                output[x][y] = -1; // outside the object -> to be computed
+        }
+    }
+    std::cout << "distance" << std::endl;
 
     // forward
     for (int y=0; y<=height-1; y++) {
         for (int x=0; x<=width-1; x++) {
             double v = output[x][y];
             if (v<0) continue;
-            for(int k=0;k<tab.length;k++) {
+            for(int k=0;k<3;k++) {
                 int dx = tab[k][0];
                 int dy = tab[k][1];
                 int dt = tab[k][2];
@@ -46,7 +49,7 @@ std::vector<std::vector<double>> chamferDistance::calcul(std::vector<std::vector
         for (int x=width-1; x>=0; x--) {
             double v = output[x][y];
             if (v<0) continue;
-            for(int k=0;k<tab.length;k++) {
+            for(int k=0;k<3;k++) {
                 int dx = tab[k][0];
                 int dy = tab[k][1];
                 int dt = tab[k][2];
@@ -68,4 +71,4 @@ std::vector<std::vector<double>> chamferDistance::calcul(std::vector<std::vector
 
     return output;
 }
-};
+

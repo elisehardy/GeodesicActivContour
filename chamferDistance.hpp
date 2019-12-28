@@ -3,6 +3,7 @@
 #define CHAMFERDISTANCE_H
 
 #include <vector>
+#include <iostream>
 
 class chamferDistance {
 private:
@@ -13,8 +14,8 @@ private:
 
 public:
     chamferDistance();
-    void testAndSet(std::vector<std::vector<double>> output, int x, int y, double newvalue);
-    std::vector<std::vector<double>> calcul(std::vector<std::vector<bool>> input, int width, int height);
+    void testAndSet(double output[640][480], int x, int y, double newvalue);
+    double** calcul(bool input[640][480], int width, int height);
 };
 
 #endif //CHAMFERDISTANCE_H

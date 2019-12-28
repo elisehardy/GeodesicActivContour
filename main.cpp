@@ -19,8 +19,10 @@ void calcul_gradient_flow(int width, int height, MLV_Image &image){
             clum[j][i] = (int) (0.299 * red + 0.587 * green + 0.114 * blue);
         }
     }
-        //gradient
-        std::vector<std::vector<int>> gradient;
+    std::cout << "clum" << std::endl;
+
+    //gradient
+        int gradient[width][height];
         int maxgradient =0;
         for(int i =0; i< height-2; i++){
             for(int j =0; j<width-2;j++){
@@ -34,8 +36,9 @@ void calcul_gradient_flow(int width, int height, MLV_Image &image){
                 maxgradient = std::max(maxgradient, snorm);
             }
         }
+    std::cout << "gradient" << std::endl;
 
-        std::vector<std::vector<bool>> binarygradient;
+        bool binarygradient[640][480];
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++)
             if (gradient[j][i] > 100 * maxgradient / 100) {
@@ -44,15 +47,21 @@ void calcul_gradient_flow(int width, int height, MLV_Image &image){
                 gradient[j][i] = 0;
             }
     }
+    std::cout << "binary" << std::endl;
 
     std::vector<std::vector<int>> flow;
+    std::cout << "calcul" << std::endl;
+
     std::vector<std::vector<double>> cdist = chamferDistance().calcul(binarygradient, width, height);
+    std::cout << "fin calcul" << std::endl;
+
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             flow[j][i] = (int) (5 * cdist[j][i]);
         }
     }
 
+    std::cout << "fin graidnet flow" << std::endl;
 
 
 
@@ -129,8 +138,13 @@ int main(int argc, char** argv){
             ) {
         MLV_actualise_window();
     }
+    std::cout << "aaa" << std::endl;
+
     MLV_actualise_window();
+    std::cout << "actualise" << std::endl;
+
     calcul_gradient_flow(width, height, *image);
+    std::cout << "calcul gradient flow" << std::endl;
     create_and_boucle(width, height, *image);
     MLV_actualise_window();
     MLV_wait_seconds( 5 );
