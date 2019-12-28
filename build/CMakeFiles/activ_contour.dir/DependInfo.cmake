@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ehardy/CLionProjects/untitled2/Point.cpp" "/home/ehardy/CLionProjects/untitled2/build/CMakeFiles/activ_contour.dir/Point.cpp.o"
-  "/home/ehardy/CLionProjects/untitled2/Snake.cpp" "/home/ehardy/CLionProjects/untitled2/build/CMakeFiles/activ_contour.dir/Snake.cpp.o"
-  "/home/ehardy/CLionProjects/untitled2/main.cpp" "/home/ehardy/CLionProjects/untitled2/build/CMakeFiles/activ_contour.dir/main.cpp.o"
+  "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.cpp" "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles/activ_contour.dir/Point.cpp.o"
+  "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.cpp" "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles/activ_contour.dir/Snake.cpp.o"
+  "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/main.cpp" "/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles/activ_contour.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

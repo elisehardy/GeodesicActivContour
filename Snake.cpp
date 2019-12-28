@@ -1,6 +1,3 @@
-//
-// Created by ehardy on 12/4/19.
-//
 
 #include "Snake.hpp"
 #include "Point.hpp"
@@ -18,6 +15,11 @@ Snake::Snake(int _width_image, int _height_image, const std::vector<std::vector<
 }
 
 Snake::~Snake() {};
+
+
+///////////////////////////////////////////////
+
+//calcul energie interne
 
 
 double Snake::calculUniformity(Point preview, Point current, Point next) {
@@ -46,6 +48,16 @@ double Snake::calculCurvature(Point preview, Point current, Point next) {
 }
 
 
+
+/////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////
+
+//calcul energie extern
+
+
 double Snake::calculFlow(Point current, Point point) {
     return this->flowEnergy[point.x][point.y] - this->flowEnergy[current.x][current.y];
 }
@@ -55,6 +67,8 @@ double Snake::calculInertia(Point current, Point point) {
     return current.calculDistance(point) * this->gradient[current.x][current.y];
 }
 
+
+////////////////////////////////////
 
 double Snake::getLength() {
     double res = 0;
@@ -115,7 +129,7 @@ bool Snake::update() {
         //find min
         double energyMin = std::numeric_limits<double>::max();
         double energy = 0;
-        int x, y;
+        int x =0, y=0;
 
         for (int j = -1; j <= 1; j++) {
             for (int h = -1; h <= 1; h++) {
@@ -263,3 +277,12 @@ void Snake::recreate(int space) {
     this->snake = snake_tmp;
 
 }
+
+int Snake::getSizePoint(){
+    return snake.size();
+}
+
+std::vector<Point> Snake::getSnake(){
+    return snake;
+}
+

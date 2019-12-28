@@ -6,19 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/ehardy/CLionProjects/untitled2/Point.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.cpp
+Point.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.hpp
+cmath
+-
 
-/home/ehardy/CLionProjects/untitled2/Snake.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.hpp
+
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.cpp
+Snake.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.hpp
+Point.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.hpp
+limits
+-
+cmath
+-
+
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.hpp
 iostream
 -
 vector
 -
 Point.hpp
-/home/ehardy/CLionProjects/untitled2/Point.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.hpp
 
-/home/ehardy/CLionProjects/untitled2/main.cpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/main.cpp
 Snake.hpp
-/home/ehardy/CLionProjects/untitled2/Snake.hpp
+/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.hpp
 MLV/MLV_all.h
 -
 

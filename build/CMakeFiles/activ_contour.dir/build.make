@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ehardy/CLionProjects/untitled2
+CMAKE_SOURCE_DIR = /home/ehardy/CLionProjects/untitled2/GeodesicActivContour
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ehardy/CLionProjects/untitled2/build
+CMAKE_BINARY_DIR = /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/activ_contour.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/activ_contour.dir/flags.make
 
 CMakeFiles/activ_contour.dir/main.cpp.o: CMakeFiles/activ_contour.dir/flags.make
 CMakeFiles/activ_contour.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/activ_contour.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/main.cpp.o -c /home/ehardy/CLionProjects/untitled2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/activ_contour.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/main.cpp.o -c /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/main.cpp
 
 CMakeFiles/activ_contour.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activ_contour.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/main.cpp > CMakeFiles/activ_contour.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/main.cpp > CMakeFiles/activ_contour.dir/main.cpp.i
 
 CMakeFiles/activ_contour.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activ_contour.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/main.cpp -o CMakeFiles/activ_contour.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/main.cpp -o CMakeFiles/activ_contour.dir/main.cpp.s
 
 CMakeFiles/activ_contour.dir/Snake.cpp.o: CMakeFiles/activ_contour.dir/flags.make
 CMakeFiles/activ_contour.dir/Snake.cpp.o: ../Snake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/activ_contour.dir/Snake.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/Snake.cpp.o -c /home/ehardy/CLionProjects/untitled2/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/activ_contour.dir/Snake.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/Snake.cpp.o -c /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.cpp
 
 CMakeFiles/activ_contour.dir/Snake.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activ_contour.dir/Snake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/Snake.cpp > CMakeFiles/activ_contour.dir/Snake.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.cpp > CMakeFiles/activ_contour.dir/Snake.cpp.i
 
 CMakeFiles/activ_contour.dir/Snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activ_contour.dir/Snake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/Snake.cpp -o CMakeFiles/activ_contour.dir/Snake.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Snake.cpp -o CMakeFiles/activ_contour.dir/Snake.cpp.s
 
 CMakeFiles/activ_contour.dir/Point.cpp.o: CMakeFiles/activ_contour.dir/flags.make
 CMakeFiles/activ_contour.dir/Point.cpp.o: ../Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/activ_contour.dir/Point.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/Point.cpp.o -c /home/ehardy/CLionProjects/untitled2/Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/activ_contour.dir/Point.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/activ_contour.dir/Point.cpp.o -c /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.cpp
 
 CMakeFiles/activ_contour.dir/Point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activ_contour.dir/Point.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/Point.cpp > CMakeFiles/activ_contour.dir/Point.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.cpp > CMakeFiles/activ_contour.dir/Point.cpp.i
 
 CMakeFiles/activ_contour.dir/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activ_contour.dir/Point.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/Point.cpp -o CMakeFiles/activ_contour.dir/Point.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/Point.cpp -o CMakeFiles/activ_contour.dir/Point.cpp.s
 
 # Object files for target activ_contour
 activ_contour_OBJECTS = \
@@ -110,7 +110,7 @@ activ_contour: CMakeFiles/activ_contour.dir/Snake.cpp.o
 activ_contour: CMakeFiles/activ_contour.dir/Point.cpp.o
 activ_contour: CMakeFiles/activ_contour.dir/build.make
 activ_contour: CMakeFiles/activ_contour.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ehardy/CLionProjects/untitled2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable activ_contour"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable activ_contour"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/activ_contour.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/activ_contour.dir/clean:
 .PHONY : CMakeFiles/activ_contour.dir/clean
 
 CMakeFiles/activ_contour.dir/depend:
-	cd /home/ehardy/CLionProjects/untitled2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ehardy/CLionProjects/untitled2 /home/ehardy/CLionProjects/untitled2 /home/ehardy/CLionProjects/untitled2/build /home/ehardy/CLionProjects/untitled2/build /home/ehardy/CLionProjects/untitled2/build/CMakeFiles/activ_contour.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ehardy/CLionProjects/untitled2/GeodesicActivContour /home/ehardy/CLionProjects/untitled2/GeodesicActivContour /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build /home/ehardy/CLionProjects/untitled2/GeodesicActivContour/build/CMakeFiles/activ_contour.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/activ_contour.dir/depend
 

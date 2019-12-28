@@ -11,6 +11,7 @@
 
 
 class Snake {
+public:
     const int ITERATION_MAX = 100;
     const double alpha = 1.1, beta = 1.2, gamma = 1.5, delta = 3.0;
     const int AUTO_LOOP = 10;
@@ -57,6 +58,9 @@ public:
     void removePoint(int min);
 
     void addPoint(int max);
+
+    int getSizePoint();
+    std::vector<Point> getSnake();
 
 
 };
