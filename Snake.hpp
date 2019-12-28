@@ -19,16 +19,16 @@ public:
     const int AUTO_MAX = 16;
     const bool AUTO = true;
 private:
-    std::vector<Point> snake;
+    std::vector <Point> snake;
     double length;
     int width_image;
     int height_image;
-    std::vector<std::vector<int>> gradient;
-    std::vector<std::vector<int>> flow;
-    std::vector<std::vector<double>> uniformityEnergy;
-    std::vector<std::vector<double>> curvatureEnergy;
-    std::vector<std::vector<double>> flowEnergy;
-    std::vector<std::vector<double>> inertiaEnergy;
+    std::vector <std::vector<int>> gradient;
+    std::vector <std::vector<int>> flow;
+    std::vector <std::vector<double>> uniformityEnergy;
+    std::vector <std::vector<double>> curvatureEnergy;
+    std::vector <std::vector<double>> flowEnergy;
+    std::vector <std::vector<double>> inertiaEnergy;
 
     bool update();
 
@@ -36,14 +36,14 @@ private:
 
 public:
 
-    Snake(int _width_image, int _height_image, const std::vector<std::vector<int>> &gradient,
-          const  std::vector<std::vector<int>> &flow, std::vector<Point> points);
+    Snake(int _width_image, int _height_image, const std::vector <std::vector<int>> &gradient,
+          const std::vector <std::vector<int>> &flow, std::vector <Point> points);
 
     ~Snake();
 
-    std::vector<Point> main_loop();
+    std::vector <Point> main_loop();
 
-    static void normalizeEnergy(std::vector<std::vector<double>> energy);
+    static void normalizeEnergy(std::vector <std::vector<double>> energy);
 
     double calculUniformity(Point preview, Point current, Point next);
 
@@ -60,8 +60,8 @@ public:
     void addPoint(int max);
 
     int getSizePoint();
-    std::vector<Point> getSnake();
 
+    std::vector <Point> getSnake();
 
 };
 

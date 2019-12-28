@@ -136,6 +136,5 @@ int main(int argc, char** argv){
     MLV_wait_seconds( 5 );
     MLV_free_window();
 
-
     return 0;
 }
