@@ -1,20 +1,21 @@
-cmake_minimum_required(VERSION 3.13)
-project(activ_contour)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.13)
+PROJECT(activ_contour)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(MY_PKG REQUIRED IMPORTED_TARGET MLV)
+FIND_PACKAGE(PkgConfig REQUIRED)
+PKG_CHECK_MODULES(MLV REQUIRED IMPORTED_TARGET MLV)
 
-set(SRCS
-        main.cpp
-        Snake.cpp
-        Point.cpp
-        )
-set(HEADERS
-        Snake.hpp
-        Point.cpp)
+SET(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include/)
+SET(SRC_DIR ${CMAKE_SOURCE_DIR}/include/)
+
+INCLUDE_DIRECTORIES(
+    ${INCLUDE_DIR}
+)
+
+FILE(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
+FILE(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/*.hpp)
 
 
-add_executable(activ_contour ${SRCS} ${HEADERS})
+ADD_EXECUTABLE(activ_contour ${SOURCE_FILES} ${HEADER_FILES})
 
-target_link_libraries(activ_contour PUBLIC
-    PkgConfig::MY_PKG)
+TARGET_LINK_LIBRARIES(activ_contour PUBLIC
+    PkgConfig::MLV)

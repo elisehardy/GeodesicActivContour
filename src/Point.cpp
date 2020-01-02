@@ -1,17 +1,10 @@
-//
-// Created by ehardy on 12/4/19.
-//
-
-#include "Point.hpp"
 #include <cmath>
+
+#include <Point.hpp>
 
 
 Point::Point(int _x, int _y) :
-        x(_x), y(_y) {
-};
-
-
-Point::~Point() {
+    x(_x), y(_y) {
 };
 
 
