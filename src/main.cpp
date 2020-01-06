@@ -104,7 +104,9 @@ void create_and_boucle(int width, int height, MLV_Image &image) {
     
     //create snake
     Snake snake = Snake(width, height, vector2D<int>(), vector2D<int>(), point_depart);
+    snake.main_loop();
     drawSnake(snake, image);
+
     std::cout << "END" << std::endl;
 }
 
@@ -143,6 +145,7 @@ int main(int argc, char **argv) {
     calcul_gradient_flow(width, height, *image);
     std::cout << "calcul gradient flow" << std::endl;
     create_and_boucle(width, height, *image);
+
     MLV_actualise_window();
     MLV_wait_seconds(5);
     MLV_free_window();

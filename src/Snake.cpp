@@ -182,6 +182,8 @@ bool Snake::update() {
     length = getLength();
     std::vector<Point> tmpSnake;
     int size = snake.size();
+    std::cout <<"aaaaaaa" << std::endl;
+
     for (int i = 0; i < size; i++) {
         Point previous = snake[(i + size - 1) % size];
         Point current = snake[i];
@@ -191,13 +193,18 @@ bool Snake::update() {
         for (int j = -1; j <= 1; j++) {
             for (int h = -1; h <= 1; h++) {
                 p_tmp.setLocation(current.x + h, current.y + j);
-                this->flowEnergy[1 + h][1 + j] = calculFlow(current, p_tmp);
+                std::cout <<"zzzz" << std::endl;
+
+                this->flowEnergy[1 + h][1 + j] = double(calculFlow(current, p_tmp));
+                std::cout <<"qqq" << std::endl;
+
                 this->curvatureEnergy[1 + h][1 + j] = calculCurvature(previous, p_tmp, next);
                 this->uniformityEnergy[1 + h][1 + j] = calculUniformity(previous, next, p_tmp);
                 this->inertiaEnergy[1 + h][1 + j] = calculInertia(current, p_tmp);
             }
         }
-        
+        std::cout <<"energie" << std::endl;
+
         //energy normalize
         normalizeEnergy(flowEnergy);
         normalizeEnergy(curvatureEnergy);
@@ -249,16 +256,24 @@ bool Snake::update() {
 
 
 std::vector<Point> Snake::main_loop() {
-    for (int i = 0; update() && i < Snake::ITERATION_MAX; i++) {
-        if (Snake::AUTO && (i % Snake::AUTO_LOOP) == 0) {
+    int loop = 0;
+    std::cout <<"loop" << loop << std::endl;
+
+    while(update() && loop < Snake::ITERATION_MAX) {
+        std::cout <<"loop" << loop << std::endl;
+
+        if (Snake::AUTO && (loop % Snake::AUTO_LOOP) == 0) {
             removePoint(Snake::AUTO_MIN);
             addPoint(Snake::AUTO_MAX);
         }
-        i++;
+        loop++;
     }
+    std::cout <<"loop" << loop << std::endl;
+
     if (Snake::AUTO) {
         recreate(Snake::AUTO_MAX);
     }
+    std::cout <<"loop" << loop << std::endl;
     return snake;
 }
 

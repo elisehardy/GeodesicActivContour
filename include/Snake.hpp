@@ -19,7 +19,7 @@ class Snake {
         static constexpr double GAMMA = 1.5; /** Flow (higher value force the gradient attraction). */
         static constexpr double DELTA = 3.0; /**< Inertia (higher value for to stick to the gradient). */
         
-        static constexpr int ITERATION_MAX = 100; /** Maximum number of iterations (if no convergence). */
+        static constexpr int ITERATION_MAX = 10; /** Maximum number of iterations (if no convergence). */
         
         static constexpr int AUTO_LOOP = 10;
         static constexpr int AUTO_MIN = 8;
