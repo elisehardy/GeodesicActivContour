@@ -17,7 +17,7 @@ class Point {
         
         ~Point() = default;
         
-        double calculDistance(Point p);
+        double distance(Point p);
         
         void setLocation(int _x, int _y);
 };

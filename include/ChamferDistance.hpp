@@ -10,7 +10,7 @@ using vector2D = std::vector<std::vector<T>>;
 
 
 
-class chamferDistance {
+class ChamferDistance {
     private:
         int tab[3][3] = {
             { 1, 0, 5 },
@@ -26,9 +26,9 @@ class chamferDistance {
     
     public:
         
-        chamferDistance();
+        ChamferDistance();
         
-        vector2D<double> calcul(bool **input, int width, int height);
+        vector2D<double> compute(bool **input, int width, int height);
 };
 
 

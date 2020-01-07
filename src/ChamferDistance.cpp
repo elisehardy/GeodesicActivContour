@@ -1,14 +1,14 @@
-#include <chamferDistance.hpp>
+#include <ChamferDistance.hpp>
 #include <Snake.hpp>
 
 
-chamferDistance::chamferDistance() :
+ChamferDistance::ChamferDistance() :
     chamferWidth(0), chamferHeight(0) {
     this->normalizer = tab[0][2];
 }
 
 
-void chamferDistance::testAndSet(vector2D<double> &output, int x, int y, double newvalue) {
+void ChamferDistance::testAndSet(vector2D<double> &output, int x, int y, double newvalue) {
     if (x < 0 || x >= this->chamferWidth || y < 0 || y >= this->chamferHeight) {
         return;
     }
@@ -21,24 +21,23 @@ void chamferDistance::testAndSet(vector2D<double> &output, int x, int y, double 
 }
 
 
-vector2D<double> chamferDistance::calcul(bool **input, int width, int height) {
+vector2D<double> ChamferDistance::compute(bool **input, int width, int height) {
     vector2D<double> output = vector2D<double>(width, std::vector<double>(height));
     
     this->chamferWidth = width;
     this->chamferHeight = height;
     
-    // initialize calculDistance
+    // initialize computeDistance
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
             if (input[x][y]) {
-                output[x][y] = 0; // inside the object -> calculDistance=0
+                output[x][y] = 0; // inside the object -> computeDistance=0
             }
             else {
                 output[x][y] = -1;
             } // outside the object -> to be computed
         }
     }
-    std::cout << "forward" << std::endl;
     
     // forward
     for (int y = 0; y <= height - 1; y++) {
@@ -66,7 +65,6 @@ vector2D<double> chamferDistance::calcul(bool **input, int width, int height) {
         }
     }
     
-    std::cout << "backward" << std::endl;
     // backward
     for (int y = height - 1; y >= 0; y--) {
         for (int x = width - 1; x >= 0; x--) {
@@ -95,7 +93,6 @@ vector2D<double> chamferDistance::calcul(bool **input, int width, int height) {
         }
     }
     
-    std::cout << "normalize" << std::endl;
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
             output[x][y] = output[x][y] / normalizer;

@@ -8,7 +8,7 @@ Point::Point(int _x, int _y) :
 };
 
 
-double Point::calculDistance(Point p) {
+double Point::distance(Point p) {
     return sqrt((this->x - p.x) * (this->x - p.x) + (this->y - p.y) * (this->y - p.y));
 }
 
